@@ -1,0 +1,41 @@
+---
+title: "wageapp - Analyse Wage Data"
+author: "generalinsight"
+date: "July 31, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Summary
+
+**wageapp** is built thru shiny to produce visualization of relationship between various features and wage, from the famous **Wage** data from ISLR package. 
+
+- No preprocessing was done to the data
+- Some features were left out of the analysis, for example, with no variability - sex, region etc.
+- Wage was compared with each of the features in a plot to visually check relationship
+
+
+## Data Overview
+
+```{r, echo = TRUE, cache=TRUE}
+library(ISLR); data("Wage");pairs(Wage[, -c(3,7,10,11)])
+```
+
+## App Idea
+
+Real life data often includes many variables where it is not immediately clear as to which ones are integral to the analysis and which ones can be thrown away.
+
+Before one can jump into modelling, visual analysis can help in exploration and forming ideas about the data and relationships.
+
+While this app is built with **Wage** data alone, the approach can be replicated with other data sets. 
+
+With minor tweaks, one can repurpose this app for other datasets.
+
+## App link
+
+Thank you for cheking it out! 
+
+The app is hosted at shinyapps.io per link [here](https://generalinsight.shinyapps.io/wageapp/).
